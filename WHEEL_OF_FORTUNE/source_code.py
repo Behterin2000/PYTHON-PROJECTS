@@ -1,7 +1,3 @@
-
-# PASTE YOUR WOFPlayer CLASS (from part A) HERE
-# PASTE YOUR WOFHumanPlayer CLASS (from part B) HERE
-# PASTE YOUR WOFComputerPlayer CLASS (from part C) HERE
 import random
 VOWEL_COST = 250
 LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
@@ -24,7 +20,7 @@ class WOFPlayer:
     def __str__(self):
         return "{}(${})".format(self.name, self.prizeMoney)
 
-# Write the WOFHumanPlayer class definition (part B) here
+# WOFHumanPlayer class definition
 class WOFHumanPlayer(WOFPlayer):
     def __init__(self,name):
         WOFPlayer.__init__(self,name)
@@ -41,7 +37,7 @@ class WOFHumanPlayer(WOFPlayer):
 
         human_input=input("Guess a letter,phrase,or type 'exit' or 'pass'")
         return human_input
-# Write the WOFComputerPlayer class definition (part C) here
+#the WOFComputerPlayer class definition
 class WOFComputerPlayer(WOFPlayer):
 
     
@@ -86,8 +82,6 @@ class WOFComputerPlayer(WOFPlayer):
             else:
                 return random.choice(self.possible)
 
-#import sys
-#sys.setExecutionLimit(600000) # let this take up to 10 minutes
 
 import json
 import random
