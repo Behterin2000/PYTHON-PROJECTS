@@ -1,3 +1,7 @@
+
+# PASTE YOUR WOFPlayer CLASS (from part A) HERE
+# PASTE YOUR WOFHumanPlayer CLASS (from part B) HERE
+# PASTE YOUR WOFComputerPlayer CLASS (from part C) HERE
 import random
 VOWEL_COST = 250
 LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
@@ -82,6 +86,8 @@ class WOFComputerPlayer(WOFPlayer):
             else:
                 return random.choice(self.possible)
 
+#import sys
+#sys.setExecutionLimit(600000) # let this take up to 10 minutes
 
 import json
 import random
@@ -127,6 +133,7 @@ def spinWheel():
 def getRandomCategoryAndPhrase():
     with open("phrases.json", 'r') as f:
         phrases = json.loads(f.read())
+
         category = random.choice(list(phrases.keys()))
         phrase   = random.choice(phrases[category])
         return (category, phrase.upper())
